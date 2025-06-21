@@ -1,0 +1,7 @@
+[submodule "poky"]
+	path = poky
+	url = https://github.com/yoctoproject/poky.git
+	branch = kirkstone
+[submodule "meta-xilinx"]
+	path = meta-xilinx
+	url = https://github.com/Xilinx/meta-xilinx.git
