@@ -1,7 +1,19 @@
 [submodule "poky"]
 	path = poky
 	url = https://github.com/yoctoproject/poky.git
-	branch = kirkstone
+	branch = scarthgap
 [submodule "meta-xilinx"]
 	path = meta-xilinx
 	url = https://github.com/Xilinx/meta-xilinx.git
+	branch = scarthgap
+[submodule "meta-openembedded"]
+	path = meta-openembedded
+	url = https://git.openembedded.org/meta-openembedded
+	branch = scarthgap
+[submodule "meta-arm"]
+	path = meta-arm
+	url = https://git.yoctoproject.org/meta-arm
+	branch = scarthgap
+[submodule "meta-xilinx-tools"]
+	path = meta-xilinx-tools
+	url = https://github.com/Xilinx/meta-xilinx-tools

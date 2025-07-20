@@ -4,6 +4,9 @@
 git submodule update --init --recursive
 
 # source poky environment while specifiying which local.conf and bblayers.conf it should pick
-TEMPLATECONF=meta-pynqz2/conf/templates source poky/oe-init-build-env
+rm build/conf -rf
+export TEMPLATECONF="$PWD/meta-pynqz2/conf/templates/pynqz1"
+echo "TEMPLATECONF=$TEMPLATECONF"
+source poky/oe-init-build-env
 
 # todo: print the list of bitbake+image commands possible
