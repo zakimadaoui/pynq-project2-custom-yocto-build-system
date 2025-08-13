@@ -1,0 +1,7 @@
+# Description: Creates a partitioned SD card image. Boot files
+# are located in the first vfat partition. Rootfs will be in second ext4 partition.
+
+# FIXME: this is unused for now, more work is needed to get this to an optimal condition
+
+part  /boot  --source rootfs --change-directory=boot   --fstype=vfat  --use-label  --label boot  --active  --align 4
+part  /      --source rootfs --exclude-path=boot/      --fstype=ext4  --use-label  --label root            --align 4

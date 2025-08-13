@@ -5,29 +5,14 @@ Please see the corresponding sections below for details.
 Dependencies
 ============
 
-  URI: <first dependency>
-  branch: <branch name>
+  URI: core
+  branch: scarthgap
 
-  URI: <second dependency>
-  branch: <branch name>
+  URI: xilinx
+  branch: scarthgap
 
-  .
-  .
-  .
-
-Patches
-=======
-
-Please submit any patches against the meta-pynqz2 layer to the xxxx mailing list (xxxx@zzzz.org)
-and cc: the maintainer:
-
-Maintainer: XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
-
-Table of Contents
-=================
-
-  I. Adding the meta-pynqz2 layer to your build
- II. Misc
+  URI: xilinx-tools
+  branch: scarthgap
 
 
 I. Adding the meta-pynqz2 layer to your build

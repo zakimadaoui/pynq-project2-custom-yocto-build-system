@@ -1,3 +1,11 @@
+# TODOs
+[x] i need a startup script that loads the bitstream overlay
+[ ] clean up this file and organize learned knowledge and project description...
+[ ] for now development flow is still sub-optimal so next we need to figure out ways to improve iterations
+    - a script for creating a fully working sd-card and flashing the wic image
+    - a script for pusing the majority of stuff over ssh
+[ ] maybe a diagram of the boot process and the general bsp arch
+
 # Requirements
 Create a yocto-based build system for creating a linux distribution for the pynqz2
 - must be possible to create a minimal linux system.
@@ -5,16 +13,33 @@ Create a yocto-based build system for creating a linux distribution for the pynq
 - must be possible to easily update the device tree
 - must be possible to use either SD card or TFTP for just the linux kernel and other stuff
 
+- create a distro conf file that:
+    - reduces unneeded junk
+    - remove the poky printed text at the start and reply with my own
+- create an image recipe that includes
+    - add needed utilities such as ssh, network stuff, strace (good for kernel moduel debuging from userspace calls), nano, gpio tools and kenel support for that if needed
+    - set passowrd ?
 
-# TODO:
-[ ] need a distro with minimal linux image and more control..
-[ ] need to fix slow boot issue
-[ ] need to also be able to do incremental builds and uploads to target without re-mounting and re-flashing the sdcard
+- be able to ssh over ethernet
+- be able to load fpga overlay and control leds
 
-[ ]OUT_OF_THIS_PROJECT need to also be able to do incremental changes to fpga logic and use device tree overlays
+<!-- TODO after this -->
+learn more about xilinx hardware
+do some fpga development and device tree changes
+continue improving the development flow
+secure boot and arm trusted zone
 
 
-
+# flash wic to sd-card
+```bash
+sudo umount /dev/mmcblk0*
+sudo bmaptool copy --nobmap pynq-image-pynq-z2.rootfs.wic /dev/mmcblk0 # sudo apt install bmap-tools
+sudo umount /dev/mmcblk0*
+```
+# See wic image contents
+```
+wic ls build/tmp/deploy/images/pynq-z2/pynq-image-pynq-z2.rootfs.wic:1
+```
 
 
 # Lessons learned

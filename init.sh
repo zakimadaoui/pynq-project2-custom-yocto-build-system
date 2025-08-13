@@ -5,7 +5,7 @@ git submodule update --init --recursive
 
 # source poky environment while specifiying which local.conf and bblayers.conf it should pick
 rm build/conf -rf
-export TEMPLATECONF="$PWD/meta-pynqz2/conf/templates/pynqz1"
+export TEMPLATECONF="$PWD/meta-pynqz2/conf/templates/pynq"
 echo "TEMPLATECONF=$TEMPLATECONF"
 source poky/oe-init-build-env
 

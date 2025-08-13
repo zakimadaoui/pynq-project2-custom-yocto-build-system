@@ -1,0 +1,9 @@
+&gem0 {
+	status = "okay";
+	phy-mode = "rgmii-id";
+	phy-handle = <&ethernet_phy>;
+
+	ethernet_phy: ethernet-phy@0 { /* rtl8211e-vl */
+		reg = <1>;
+	};
+};

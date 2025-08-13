@@ -1,0 +1,7 @@
+For building a linux image for the pynq-z2, use:
+    
+    bitbake pynq-image
+
+Image files can be found at `build/tmp/deploy/images/pynq-z2/` 
+
+TODO: more instructions to be added here in the future...
