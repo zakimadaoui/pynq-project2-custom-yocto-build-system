@@ -1,0 +1,18 @@
+
+## Boot files
+Boot files will be placed in build/tmp/deploy/pynq-z2/
+- TODO 
+
+The build system will also generate a wic image ready to be flashed directly to an SD card
+
+## flash wic to sd-card
+```bash
+sudo umount /dev/mmcblk0*
+sudo bmaptool copy --nobmap pynq-image-pynq-z2.rootfs.wic /dev/mmcblk0 # sudo apt install bmap-tools
+sudo umount /dev/mmcblk0*
+```
+## See wic image contents
+```
+wic ls build/tmp/deploy/images/pynq-z2/pynq-image-pynq-z2.rootfs.wic:1
+```
+

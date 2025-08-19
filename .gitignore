@@ -1,1 +1,5 @@
+learning.txt
 build/
+build/*
+artifacts/
+artifacts/*
